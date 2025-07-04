@@ -1,20 +1,51 @@
 import Navbar from "../components/NavBar";
 import "../index.css";
-
+import CustomerSlider from "../components/CustomerSlider";
+import Footer from "../components/Footer";
 const LandingPage = () => {
   return (
     <>
-      <Navbar />
       <div className="container">
-        <div style={{ gridColumn: "span 12" }}>
-          <h1>Welcome to LINK.</h1>
-          <p>Customer Intelligence Platform for Telecom Excellence.</p>
+        <div
+          className="centered-content"
+          style={{ gridColumn: "1 / -1", marginTop: "30px" }}
+        >
+          <Navbar />
+          <div className="Hero">
+            <h1 className="large-heading">
+              Built for Telcos that don’t guess <br /> they know.{" "}
+            </h1>
+            <p className="paragraph-text">
+              LINK. gives telcos predictive insights to retain customers and{" "}
+              <br /> grow stronger relationships—no guesswork required.
+            </p>
+
+            <div className="cta-buttons">
+              <a
+                href="https://github.com/halacoded/LINK"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
+                TRY LINK. NOW
+              </a>
+              <a
+                href="https://github.com/halacoded/LINK."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-secondary"
+              >
+                LEARN MORE
+              </a>
+            </div>
+          </div>
+
+          <section className="customer-section">
+            <CustomerSlider />
+          </section>
         </div>
-
-        <div style={{ gridColumn: "span 6" }}>{/* Left half content */}</div>
-
-        <div style={{ gridColumn: "span 6" }}>{/* Right half content */}</div>
       </div>
+      <Footer />
     </>
   );
 };

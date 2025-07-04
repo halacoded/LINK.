@@ -1,32 +1,30 @@
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 30px;
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
-  font-family: var(--font-body);
+  margin-right: 50px;
 }
 
 .navbar__logo {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
+  text-decoration: none;
+  font-family: var(--heading-heading);
   font-weight: 600;
-  color: #111;
+  color: #000000;
 }
 
 .navbar__options {
   display: flex;
-  gap: 25px;
+  gap: 50px;
+  margin-left: 25px;
+  color: #000000;
+  grid-column: -3 /-1;
+  padding: 0;
 }
 
 .navbar__link {
   text-decoration: none;
-  color: #333;
+  color: #000000;
   font-weight: 500;
   transition: color 0.2s ease;
 }
 
 .navbar__link:hover {
-  color: #000;
+  color: #333;
 }
