@@ -2,6 +2,11 @@
 
 **LINK.** is a full-stack customer intelligence web platform designed to help telecom operators take action on behavioral insights, predict customer dissatisfaction, and improve retention. This project was developed during **Huawei x Kuwait University Internship Program Summer 2025** and is inspired by Huawei's **SmartCare** solution.
 
+<div align="center">
+  <img src="src/assets/ReadmePG/demo1.gif" alt="LINK Demo" />
+</div>
+
+
 ## Supervisors
 
 - **Supervisor Trainee:** Dr. Essam Alruqobah  
