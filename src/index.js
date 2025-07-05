@@ -10,6 +10,7 @@ import SignUpPage from "./pages/SignUpPage";
 import DashboradPage from "./pages/DashboradPage";
 import ProfilePage from "./pages/ProfilePage";
 import PredictionsPage from "./pages/PredictionsPage";
+import CompleteProfilePage from "./pages/CompleteProfilePage";
 import "./index.css";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,8 @@ const router = createBrowserRouter([
       { path: "/", element: <LandingPage /> },
       { path: "/login", element: <LoginPage /> },
       { path: "/signup", element: <SignUpPage /> },
+      { path: "/complete-profile", element: <CompleteProfilePage /> },
+
       { path: "/dashboard", element: <DashboradPage /> },
       { path: "/profile", element: <ProfilePage /> },
       { path: "/predictions", element: <PredictionsPage /> },

@@ -39,7 +39,7 @@ const SignupPage = () => {
     try {
       await signup(formData);
       setUser(true);
-      navigate("/profile"); // 👈 change if you want to redirect somewhere else
+      navigate("/profile");
     } catch (err) {
       setError(err.response?.data?.message || "Signup failed");
     }
@@ -56,7 +56,6 @@ const SignupPage = () => {
 
         <form className="login-form" onSubmit={handleSubmit}>
           <h2 className="login-title">Create Your Account</h2>
-
           <div className="form-item">
             <label htmlFor="username">Username</label>
             <input
@@ -67,7 +66,6 @@ const SignupPage = () => {
               required
             />
           </div>
-
           <div className="form-item">
             <label htmlFor="email">Email</label>
             <input
@@ -78,7 +76,6 @@ const SignupPage = () => {
               required
             />
           </div>
-
           <div className="form-item">
             <label htmlFor="company">Company</label>
             <select
@@ -95,7 +92,6 @@ const SignupPage = () => {
               ))}
             </select>
           </div>
-
           <div className="form-item">
             <label htmlFor="role">Role</label>
             <select
@@ -112,7 +108,6 @@ const SignupPage = () => {
               ))}
             </select>
           </div>
-
           <div className="form-item">
             <label htmlFor="password">Password</label>
             <input
@@ -123,7 +118,6 @@ const SignupPage = () => {
               required
             />
           </div>
-
           <div className="form-item">
             <label htmlFor="confirmPassword">Re-enter Password</label>
             <input
@@ -134,12 +128,43 @@ const SignupPage = () => {
               required
             />
           </div>
-
           {error && <p className="error-message">{error}</p>}
-
           <button type="submit" className="btn btn-primary">
             Sign up
-          </button>
+          </button>{" "}
+          <div className="oauth-section">
+            <div className="oauth-divider">
+              <span>or sign up with</span>
+            </div>
+
+            <div className="oauth-buttons">
+              <a
+                href="http://localhost:8000/auth/google"
+                className="oauth-btn google"
+                title="Sign up with Google"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/475656/google-color.svg"
+                  alt="Google"
+                  className="oauth-icon"
+                />
+                Google
+              </a>
+
+              <a
+                href="http://localhost:8000/auth/github"
+                className="oauth-btn github"
+                title="Sign up with GitHub"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/475654/github-color.svg"
+                  alt="GitHub"
+                  className="oauth-icon"
+                />
+                GitHub
+              </a>
+            </div>
+          </div>
         </form>
       </div>
     </div>

@@ -16,4 +16,4 @@ const checkToken = () => {
     return true;
   } else return false;
 };
-export { storeToken, checkToken, logout };
+export { storeToken, checkToken, logout, getToken };

@@ -73,6 +73,39 @@ const LoginPage = () => {
           <button type="submit" className="btn btn-primary">
             Sign in
           </button>
+          <div className="oauth-section">
+            <div className="oauth-divider">
+              <span>or login with</span>
+            </div>
+
+            <div className="oauth-buttons">
+              <a
+                href="http://localhost:8000/auth/google"
+                className="oauth-btn google"
+                title="Login with Google"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/475656/google-color.svg"
+                  alt="Google"
+                  className="oauth-icon"
+                />
+                Google
+              </a>
+
+              <a
+                href="http://localhost:8000/auth/github"
+                className="oauth-btn github"
+                title="Login with GitHub"
+              >
+                <img
+                  src="https://www.svgrepo.com/show/475654/github-color.svg"
+                  alt="GitHub"
+                  className="oauth-icon"
+                />
+                GitHub
+              </a>
+            </div>
+          </div>
         </form>
       </div>
     </div>

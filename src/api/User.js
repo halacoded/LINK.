@@ -1,5 +1,5 @@
 import instance from ".";
-import { storeToken } from "./storage";
+import { storeToken, getToken } from "./storage";
 
 const signup = async (userData) => {
   try {
@@ -82,4 +82,38 @@ const updateUser = async (userData) => {
   }
 };
 
-export { signup, login, getMe, getUserByUsername, getAllUsers, updateUser };
+const completeProfile = async (userData) => {
+  try {
+    const token = getToken();
+
+    const formData = new FormData();
+    for (const key in userData) {
+      formData.append(key, userData[key]);
+    }
+
+    const { data } = await instance.put("/users/update", formData, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "multipart/form-data",
+      },
+    });
+
+    return data;
+  } catch (error) {
+    console.error(
+      "Complete profile error:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+};
+
+export {
+  signup,
+  login,
+  getMe,
+  getUserByUsername,
+  getAllUsers,
+  updateUser,
+  completeProfile,
+};

@@ -80,3 +80,58 @@ select {
   background-color: #fff;
   box-shadow: inset 4px 4px 0 rgba(30, 144, 255, 0.1);
 }
+
+.oauth-section {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.oauth-divider {
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+.oauth-divider::before,
+.oauth-divider::after {
+  content: "";
+  height: 1px;
+  width: 40%;
+  background: #ddd;
+  margin: 0 12px;
+}
+
+.oauth-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.oauth-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #000;
+  background: #fff;
+  font-weight: 500;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.oauth-btn:hover {
+  background: #f1f1f1;
+  transform: translateY(-1px);
+}
+
+.oauth-icon {
+  width: 20px;
+  height: 20px;
+}
