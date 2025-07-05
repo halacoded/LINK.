@@ -1,5 +1,6 @@
 import Navbar from "../components/NavBar";
 import "../index.css";
+import { Link } from "react-router-dom";
 import CustomerSlider from "../components/CustomerSlider";
 import Footer from "../components/Footer";
 const LandingPage = () => {
@@ -21,14 +22,9 @@ const LandingPage = () => {
             </p>
 
             <div className="cta-buttons">
-              <a
-                href="https://github.com/halacoded/LINK"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
+              <Link to="/signup" className="btn btn-primary">
                 TRY LINK. NOW
-              </a>
+              </Link>
               <a
                 href="https://github.com/halacoded/LINK."
                 target="_blank"

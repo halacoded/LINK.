@@ -1,0 +1,85 @@
+import instance from ".";
+import { storeToken } from "./storage";
+
+const signup = async (userData) => {
+  try {
+    const { data } = await instance.post("/users/signup", userData);
+    storeToken(data.token);
+    return data;
+  } catch (error) {
+    console.error("Signup error:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+const login = async (credentials) => {
+  try {
+    const { data } = await instance.post("/users/login", credentials);
+    storeToken(data.token);
+    return data;
+  } catch (error) {
+    console.error("Login error:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+const getMe = async () => {
+  try {
+    const { data } = await instance.get("/users/me");
+    return data;
+  } catch (error) {
+    console.error("GetMe error:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+const getUserByUsername = async (username) => {
+  try {
+    const encodedUsername = encodeURIComponent(username);
+    const { data } = await instance.get(`/users/${encodedUsername}`);
+    return data;
+  } catch (error) {
+    console.error(
+      "Fetch user by username error:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+};
+
+const getAllUsers = async (username) => {
+  try {
+    const { data } = await instance.get("/users/all", {
+      params: { Username: username },
+    });
+    return data;
+  } catch (error) {
+    console.error(
+      "Get all users error:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+};
+
+const updateUser = async (userData) => {
+  try {
+    const formData = new FormData();
+    for (const key in userData) {
+      formData.append(key, userData[key]);
+    }
+
+    const { data } = await instance.put("/users/update", formData, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+
+    return data;
+  } catch (error) {
+    console.error("Update user error:", error.response?.data || error.message);
+    throw error;
+  }
+};
+
+export { signup, login, getMe, getUserByUsername, getAllUsers, updateUser };
