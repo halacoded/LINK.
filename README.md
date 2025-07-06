@@ -14,7 +14,7 @@
 - **Supervisor Huawei Site:** Eng. Rahaf Alhasan
 
 
-## Machine Learning Integration
+## Machine Learning
 
 LINK. is built to interface with a Python-based churn prediction model trained on IBM’s public Telco Customer Churn dataset. The model uses classification techniques (Logistic Regression, XGBoost) with telecom-inspired feature engineering:
 
@@ -27,8 +27,20 @@ LINK. is built to interface with a Python-based churn prediction model trained o
   - scikit-learn, XGBoost, Optuna (hyperparameter tuning)  
   - Performance metrics: Accuracy, Recall, F1-score
 
-🔗 ML Repo: [View Machine Learning Model on GitHub](https://github.com/halacoded/Churn-Prediction-Model-Based-on-Huawei-SmartCare) 
+ML Repo: [View Machine Learning Model on GitHub](https://github.com/halacoded/Churn-Prediction-Model-Based-on-Huawei-SmartCare) 
 
+## Backend
+
+The backend of **LINK.** is built with **Node.js**, **Express**, and **MongoDB Atlas**. It powers user authentication, stores prediction data, and integrates with the machine learning model for churn classification.
+
+ BK Repo: [View Backend on GitHub](https://github.com/halacoded/LINK-Backend)
+
+### Features
+
+- Churn prediction integration via REST API  
+- OAuth authentication with Google & GitHub  
+- MongoDB Atlas for user and prediction data  
+- Express routes for handling core platform logic
 
 ## Tech Stack
 
