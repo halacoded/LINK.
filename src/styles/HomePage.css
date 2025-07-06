@@ -1,0 +1,62 @@
+.homepage {
+  grid-column: 1 / -1;
+  font-family: var(--font-body);
+  margin-top: 40px;
+}
+
+.navbar__grid {
+  display: grid;
+  grid-template-columns: 3fr 5fr 2fr;
+  align-items: center;
+  grid-column: 1 / -1;
+  margin-bottom: 30px;
+}
+
+.navbar__logo {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.navbar__options {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.navbar__link {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  border: 2px solid black;
+  background: none;
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 83px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.navbar__link:hover {
+  background-color: #f5f5f5;
+}
+
+.active-tab {
+  background-color: black;
+  color: white;
+}
+
+.navbar__profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid black;
+  justify-self: end;
+}
+
+.page-content {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+}

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-
+import "../styles/LoginPage.css";
 const CompleteProfilePage = () => {
   const navigate = useNavigate();
   const location = useLocation();
@@ -42,50 +42,71 @@ const CompleteProfilePage = () => {
         },
       });
 
-      navigate("/profile"); //i need to change this to home when i creat dashbored and predict pages
+      navigate("/profile");
     } catch (err) {
       setError(err.response?.data?.message || "Update failed");
     }
   };
+  const allowedCompanies = [
+    "Huawei",
+    "Kuwait University",
+    "STC",
+    "Zain",
+    "Ooredoo",
+  ];
+
+  const allowedRoles = ["Admin", "Manager", "Engineer", "Student", "Guest"];
 
   return (
-    <div className="container complete-profile">
-      <h2>Complete Your Profile</h2>
-      <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="profile-form">
+      <h2 className="login-title">Complete Your Profile</h2>
+      <div className="form-row">
         <div className="form-item">
           <label>Company</label>
-          <input
-            type="text"
+          <select
             name="Company"
             value={formData.Company}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="">Select a company</option>
+            {allowedCompanies.map((company, index) => (
+              <option key={index} value={company}>
+                {company}
+              </option>
+            ))}
+          </select>
         </div>
 
         <div className="form-item">
           <label>Role</label>
-          <input
-            type="text"
+          <select
             name="Role"
             value={formData.Role}
             onChange={handleChange}
             required
-          />
+          >
+            <option value="">Select a role</option>
+            {allowedRoles.map((role, index) => (
+              <option key={index} value={role}>
+                {role}
+              </option>
+            ))}
+          </select>
         </div>
+      </div>
 
-        <div className="form-item">
-          <label>Profile Image</label>
-          <input type="file" name="ProfileImage" onChange={handleFileChange} />
-        </div>
+      <div className="form-item full-width">
+        <label>Profile Image</label>
+        <input type="file" name="ProfileImage" onChange={handleFileChange} />
+      </div>
 
-        {error && <p className="error-message">{error}</p>}
+      {error && <p className="error-message">{error}</p>}
 
-        <button type="submit" className="btn btn-primary">
-          Update Profile
-        </button>
-      </form>
-    </div>
+      <button type="submit" className="btn btn-primary">
+        Update Profile
+      </button>
+    </form>
   );
 };
 

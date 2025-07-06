@@ -16,6 +16,7 @@
   color: #000000;
   grid-column: -3 /-1;
   padding: 0;
+  /* background-color: #ff0000; */
 }
 
 .navbar__link {
@@ -47,4 +48,10 @@
 .navbar__icon {
   width: 22px;
   height: 22px;
+}
+
+.page-content {
+  grid-column: 1 / -1;
+  margin-top: 20px;
+  background-color: #ff0000;
 }
