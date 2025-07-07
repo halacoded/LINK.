@@ -13,6 +13,13 @@
 - **Supervisor Engineer:** Eng. Ali Alsairafi  
 - **Supervisor Huawei Site:** Eng. Rahaf Alhasan
 
+## Architecture Overview
+
+The frontend sends customer data to the Node.js backend, which forwards it to the Flask microservice for churn prediction. Prediction results are returned to the frontend for chart visualization and user insights.
+
+<div align="center">
+  <img src="src/assets/ReadmePG/Architecture.gif" alt="LINK Architecture" />
+</div>
 
 ## Machine Learning
 
@@ -41,6 +48,18 @@ The backend of **LINK.** is built with **Node.js**, **Express**, and **MongoDB A
 - OAuth authentication with Google & GitHub  
 - MongoDB Atlas for user and prediction data  
 - Express routes for handling core platform logic
+
+## Flask Microservice
+
+The LINK. platform integrates with a dedicated **Flask microservice** that delivers real-time churn prediction results. It acts as a bridge between the frontend and the trained machine learning model—analyzing customer feature data and returning churn probability scores for both single and batch requests.
+
+- Built with **Flask**, **scikit-learn**, and **XGBoost**
+- Receives API requests from the Node.js backend
+- Supports batch prediction through `.csv` file uploads
+- Powers the **Predictions Page** for interactive chart rendering
+
+FLASK Repo: [View Microservice on GitHub](https://github.com/halacoded/LINK-FLASK-Microserver)
+
 
 ## Tech Stack
 
