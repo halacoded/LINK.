@@ -18,7 +18,7 @@
 The frontend sends customer data to the Node.js backend, which forwards it to the Flask microservice for churn prediction. Prediction results are returned to the frontend for chart visualization and user insights.
 
 <div align="center">
-  <img src="src/assets/ReadmePG/Architecture.gif" alt="LINK Architecture" />
+  <img src="src/assets/ReadmePG/Architecture.png" alt="LINK Architecture" />
 </div>
 
 ## Machine Learning
