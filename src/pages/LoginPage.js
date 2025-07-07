@@ -28,7 +28,7 @@ const LoginPage = () => {
     try {
       await login(formData);
       setUser(true);
-      navigate("/profile");
+      navigate("/home");
     } catch (err) {
       setError(err.response?.data?.message || "Login failed");
     }

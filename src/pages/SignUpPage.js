@@ -39,7 +39,7 @@ const SignupPage = () => {
     try {
       await signup(formData);
       setUser(true);
-      navigate("/profile");
+      navigate("/home");
     } catch (err) {
       setError(err.response?.data?.message || "Signup failed");
     }
