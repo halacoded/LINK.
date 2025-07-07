@@ -13,6 +13,13 @@
 - **Supervisor Engineer:** Eng. Ali Alsairafi  
 - **Supervisor Huawei Site:** Eng. Rahaf Alhasan
 
+## Credits
+
+- Integration guidance inspired by **Lakindu Widuranga Alwis** [Integrating Machine Learning Models into your MERN App](https://masterlwa.medium.com/integrating-machine-learning-models-into-your-mern-app-0e5476b511c1 )
+
+- Login/Signup UI design inspiration from [Ryan Mulligan](https://ryanmulligan.dev)
+
+
 ## Architecture Overview
 
 The frontend sends customer data to the Node.js backend, which forwards it to the Flask microservice for churn prediction. Prediction results are returned to the frontend for chart visualization and user insights.
@@ -59,7 +66,6 @@ The LINK. platform integrates with a dedicated **Flask microservice** that deliv
 - Powers the **Predictions Page** for interactive chart rendering
 
 FLASK Repo: [View Microservice on GitHub](https://github.com/halacoded/LINK-FLASK-Microserver)
-
 
 ## Tech Stack
 
