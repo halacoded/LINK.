@@ -16,9 +16,8 @@
 ## Credits
 
 - Integration guidance inspired by **Lakindu Widuranga Alwis** [Integrating Machine Learning Models into your MERN App](https://masterlwa.medium.com/integrating-machine-learning-models-into-your-mern-app-0e5476b511c1 )
-
 - Login/Signup UI design inspiration from [Ryan Mulligan](https://ryanmulligan.dev)
-
+- Dataset used: **Telco Customer Churn** [Kaggle - blastchar](https://www.kaggle.com/datasets/blastchar/telco-customer-churn)
 
 ## Architecture Overview
 
