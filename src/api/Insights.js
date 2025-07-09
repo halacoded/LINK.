@@ -30,3 +30,16 @@ export const getBatchPrediction = async (file) => {
     throw error;
   }
 };
+
+export const getSavedPredictions = async () => {
+  try {
+    const { data } = await instance.get("/flask/user-predictions");
+    return data.predictions;
+  } catch (error) {
+    console.error(
+      "Error loading saved predictions:",
+      error.response?.data || error.message
+    );
+    return [];
+  }
+};
