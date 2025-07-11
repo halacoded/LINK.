@@ -1,10 +1,23 @@
 .navbar__options2 {
   display: flex;
-  gap: 50px;
-  background-color: #ff0000;
-  margin-left: 84px;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  margin-left: 490px;
   color: #000000;
-  grid-column: -6;
+  gap: 32px; /* unified spacing */
+}
+
+.navbar__tabs {
+  display: flex;
+  gap: 32px; /* consistent with right-actions */
+  align-items: center;
+}
+
+.navbar__right-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
 }
 
 .navbar__link2 {
@@ -18,15 +31,30 @@
   color: #333;
 }
 
+.active-tab2 {
+  font-weight: 600;
+  color: #000;
+  display: inline-block;
+  border-bottom: 1px solid #000;
+  padding-bottom: 4px;
+}
+
+.navbar__avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ccc;
+}
+
 .navbar__icon-button2 {
   background: none;
   border: none;
-  padding: 0;
   cursor: pointer;
+  padding: 0;
+  transition: opacity 0.2s ease;
   display: flex;
   align-items: center;
-  color: #000000;
-  transition: opacity 0.2s ease;
 }
 
 .navbar__icon-button2:hover {
@@ -36,16 +64,10 @@
 .navbar__icon2 {
   width: 22px;
   height: 22px;
+  stroke: #000;
 }
 
 .page-content2 {
   grid-column: 1 / -1;
   margin-top: 20px;
-}
-.active-tab2 {
-  font-weight: 600;
-  color: #000;
-  display: inline-block;
-  border-bottom: 1px solid #000;
-  padding-bottom: 4px;
 }

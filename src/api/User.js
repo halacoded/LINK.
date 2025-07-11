@@ -25,7 +25,15 @@ const login = async (credentials) => {
 
 const getMe = async () => {
   try {
-    const { data } = await instance.get("/users/me");
+    const token = getToken();
+
+    const { data } = await instance.get("/users/me", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Cache-Control": "no-cache", // ← add this
+      },
+    });
+
     return data;
   } catch (error) {
     console.error("GetMe error:", error.response?.data || error.message);
@@ -47,19 +55,9 @@ const getUserByUsername = async (username) => {
   }
 };
 
-const getAllUsers = async (username) => {
-  try {
-    const { data } = await instance.get("/users/all", {
-      params: { Username: username },
-    });
-    return data;
-  } catch (error) {
-    console.error(
-      "Get all users error:",
-      error.response?.data || error.message
-    );
-    throw error;
-  }
+const getAllUsers = async () => {
+  const { data } = await instance.get("/users/all");
+  return data;
 };
 
 const updateUser = async (userData) => {
@@ -108,6 +106,23 @@ const completeProfile = async (userData) => {
   }
 };
 
+const getCompanyUsers = async () => {
+  try {
+    const { data } = await instance.get("/users/company-users", {
+      headers: {
+        Authorization: `Bearer ${getToken()}`,
+      },
+    });
+    return data;
+  } catch (error) {
+    console.error(
+      "Get company users error:",
+      error.response?.data || error.message
+    );
+    throw error;
+  }
+};
+
 export {
   signup,
   login,
@@ -116,4 +131,5 @@ export {
   getAllUsers,
   updateUser,
   completeProfile,
+  getCompanyUsers,
 };

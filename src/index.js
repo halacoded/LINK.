@@ -12,7 +12,7 @@ import HomePage from "./pages/HomePage";
 import DashboradPage from "./pages/DashboradPage";
 import ProfilePage from "./pages/ProfilePage";
 import PredictionsPage from "./pages/PredictionsPage";
-
+import UpdateProfilePage from "./pages/UpdateProfilePage";
 import "./index.css";
 
 const queryClient = new QueryClient();
@@ -26,6 +26,7 @@ const router = createBrowserRouter([
       { path: "/login", element: <LoginPage /> },
       { path: "/signup", element: <SignUpPage /> },
       { path: "/complete-profile", element: <CompleteProfilePage /> },
+      { path: "/UpdateProfile", element: <UpdateProfilePage /> },
       { path: "/home", element: <HomePage /> },
       { path: "/dashboard", element: <DashboradPage /> },
       { path: "/profile", element: <ProfilePage /> },

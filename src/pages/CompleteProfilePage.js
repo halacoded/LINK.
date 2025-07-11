@@ -42,7 +42,7 @@ const CompleteProfilePage = () => {
         },
       });
 
-      navigate("/profile");
+      navigate("/home");
     } catch (err) {
       setError(err.response?.data?.message || "Update failed");
     }
