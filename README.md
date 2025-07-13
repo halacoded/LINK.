@@ -74,7 +74,7 @@ FLASK Repo: [View Microservice on GitHub](https://github.com/halacoded/LINK-FLAS
 | Backend      | Node.js + Express                     |
 | Database     | MongoDB                               |
 | Design Tools | Figma for UI/UX                       |
-| Styling      | Tailwind CSS / CSS Modules            |
+| Styling      | CSS                                   |
 | API Layer    | REST endpoints for model results      |
 | Deployment   | Netlify                               |
 
